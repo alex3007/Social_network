@@ -1,0 +1,15 @@
+
+.navbar{
+    grid-area: n;
+    background-color: #d068fd;
+}
+
+
+
+.item a{
+    color: white;
+}
+
+.item a.active{
+    color: greenyellow;
+}

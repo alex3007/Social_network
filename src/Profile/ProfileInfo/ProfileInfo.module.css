@@ -1,0 +1,15 @@
+.content {
+    background-color: #0319f6 ;
+    color: greenyellow;
+}
+
+
+.content_image {
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.description {
+   padding: 10px;
+}
