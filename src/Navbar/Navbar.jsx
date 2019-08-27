@@ -1,8 +1,13 @@
 import React from 'react';
 import cls from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
+import Sitebar from "./Sitebar/Sitebar";
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+    let sitebarFriends = props.sitebar
+        .map(friend => <Sitebar friend={friend.friend}/>)
+
     return (
         <nav className={cls.navbar}>
             <div className={cls.item}>
@@ -10,6 +15,12 @@ const Navbar = () => {
             </div>
             <div className={cls.item}>
                 <NavLink activeClassName={cls.active} to="/Dialogs">Dialogs</NavLink>
+            </div>
+            <div className={cls.friendsBlock}>
+                <h3> Friends</h3>
+                <div className={cls.friendCard}>
+                    {sitebarFriends}
+                </div>
             </div>
         </nav>
     );
