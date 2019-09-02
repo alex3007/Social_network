@@ -1,8 +1,6 @@
 import React from 'react';
 import cls from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
-import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../Redux/Store";
-
 
 const DialogItem = (props) => {
     let path = "/dialogs/" + props.id;
@@ -22,7 +20,7 @@ const Message = (props) => {
 
 const Dialogs = (props) => {
 
-    let state = props.store.getState().messagesPage;
+    let state = props.messagesPage;
 
     let dialogsElements = state.dialogs.map(dialog => <DialogItem
         name={dialog.name} id={dialog.id}/>);
@@ -35,14 +33,14 @@ const Dialogs = (props) => {
 
     let newMessage = React.createRef();
 
-    let sendMessage = () => {
-        props.store.dispatch( addMessageActionCreator());
+    let onSendMessage = () => {
+        props.sendMessage();
     }
 
 
     let onMessageChange = (e) => {
         let text = e.target.value;
-        props.store.dispatch( updateNewMessageTextActionCreator(text));
+        props.updateNewMessageBody(text);
     }
 
 
@@ -55,7 +53,7 @@ const Dialogs = (props) => {
                           value={newMessageText}
                           placeholder={'Enter new message'}
                           className={cls.textArea}></textarea>
-                <button onClick={sendMessage} className={cls.buttonAddPost}>Send</button>
+                <button onClick={onSendMessage} className={cls.buttonAddPost}>Send</button>
             </div>
 
 

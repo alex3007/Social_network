@@ -1,12 +1,9 @@
 import React from 'react';
 import cls from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
-import Sitebar from "./Sitebar/Sitebar";
+import SidebarContainer from "./Sidebar/SidebarContainer";
 
 const Navbar = (props) => {
-
-    let sitebarFriends = props.sitebar
-        .map(friend => <Sitebar friend={friend.friend}/>)
 
     return (
         <nav className={cls.navbar}>
@@ -19,7 +16,7 @@ const Navbar = (props) => {
             <div className={cls.friendsBlock}>
                 <h3> Friends</h3>
                 <div className={cls.friendCard}>
-                    {sitebarFriends}
+                    <SidebarContainer />
                 </div>
             </div>
         </nav>
