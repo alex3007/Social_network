@@ -1,11 +1,11 @@
 .friendItem img {
 
-       width: 70px;
-    border-radius: 15px;
+       width: 60px;
+    border-radius: 35px;
 
    }
 .friendItem{
     text-align: center;
     display: inline-block;
-   margin: 0 5px;
+    margin: 0 5px;
 }

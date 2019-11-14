@@ -5,9 +5,12 @@ const ProfileInfo = () => {
     return (
 
         <div className={cls.content}>
-            <img className={cls.content_image} src="./waterfall.jpg"></img>
+            <div className={cls.image_container}>
+            <img className={cls.content_image} src="./grass.jpg"></img>
+            </div>
             <div className={cls.description} >
-                ava+description
+                <img src="./me.jpg"></img>
+                <p>Name</p>
             </div>
         </div>
     );

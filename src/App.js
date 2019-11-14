@@ -6,7 +6,6 @@ import Profile from './Profile/Profile';
 import {BrowserRouter, Route} from "react-router-dom";
 import DialogsContainer from "./Dialogs/DialogsContainer";
 
-
 function App(props) {
 
     return (
@@ -14,8 +13,7 @@ function App(props) {
         <div className="app-page">
             <Header/>
             <Navbar store={props.store}/>
-            <div className="app-page__content">
-
+            <div className="app-page_content">
 
                 <Route path='/Dialogs' render=
                     {() => <DialogsContainer store={props.store}
@@ -23,10 +21,10 @@ function App(props) {
                 <Route path='/Profile' render=
                     {() => <Profile store={props.store}
                                     />}/>
+              <img className="app-page_intro"  src="./intro.png"/>
              </div>
-            <footer className="footer"></footer>
+            <footer className="footer" />
         </div>
-
     );
 }
 

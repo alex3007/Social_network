@@ -13,7 +13,17 @@
     grid-gap: 10px;
 }
 
-.app-page__content {
+.app-page_content {
 
-    background-color: #0319f6;
+    background-color: #edeef0;
+
+}
+
+
+.app-page_intro {
+    float: bottom;
+    max-width: 100px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }

@@ -7,7 +7,7 @@ const SidebarPerson = (props) => {
 
         <div className={cls.friendItem}>
 
-            <img src="https://wallbox.ru/wallpapers/main/201316/a27d648b57a2ebb.jpg" alt="avatar" ></img>
+            <img src="../../../friend.jpg" alt="avatar" ></img>
 
             <br/> {props.friend}
 
