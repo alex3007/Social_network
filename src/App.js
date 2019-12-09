@@ -3,8 +3,10 @@ import './App.css';
 import Header from './Header/Header';
 import Navbar from './Navbar/Navbar';
 import Profile from './Profile/Profile';
+import UsersContainer from './Users/UsersContainer';
 import {BrowserRouter, Route} from "react-router-dom";
 import DialogsContainer from "./Dialogs/DialogsContainer";
+import intro from "./Assets/images/intro.png";
 
 function App(props) {
 
@@ -21,7 +23,10 @@ function App(props) {
                 <Route path='/Profile' render=
                     {() => <Profile store={props.store}
                                     />}/>
-              <img className="app-page_intro"  src="./intro.png"/>
+                <Route path='/Users' render=
+                    {() => <UsersContainer />
+                   }/>
+              <img className="app-page_intro" src={intro} alt='intro'/>
              </div>
             <footer className="footer" />
         </div>
