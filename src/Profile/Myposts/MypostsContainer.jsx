@@ -22,9 +22,7 @@ let mapDispatchToProps = (dispatch) =>{
         updateNewPostText: (text) =>{
             let action = dispatch(updateNewPostTextActionCreator(text));
         dispatch(action);
-
         }
-
     }
 }
 

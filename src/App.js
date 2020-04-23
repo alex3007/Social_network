@@ -4,9 +4,9 @@ import Header from './Header/Header';
 import Navbar from './Navbar/Navbar';
 import Profile from './Profile/Profile';
 import UsersContainer from './Users/UsersContainer';
-import {BrowserRouter, Route} from "react-router-dom";
-import DialogsContainer from "./Dialogs/DialogsContainer";
-import intro from "./Assets/images/intro.png";
+import {BrowserRouter, Route} from 'react-router-dom';
+import DialogsContainer from './Dialogs/DialogsContainer';
+import intro from './Assets/images/intro.png';
 
 function App(props) {
 
