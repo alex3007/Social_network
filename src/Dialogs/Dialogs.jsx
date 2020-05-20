@@ -1,21 +1,8 @@
 import React from 'react';
 import cls from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
-
-const DialogItem = (props) => {
-    let path = "/dialogs/" + props.id;
-    return (
-        <div className={cls.dialogBlock}>
-            <NavLink className={cls.dialog} activeClassName={cls.active} to={path}>{props.name}</NavLink>
-        </div>
-    );
-}
-
-const Message = (props) => {
-    return (
-        <div className={cls.message}>{props.message}</div>
-    );
-}
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
 
 const Dialogs = (props) => {
@@ -35,13 +22,13 @@ const Dialogs = (props) => {
 
     let onSendMessage = () => {
         props.sendMessage();
-    }
+    };
 
 
     let onMessageChange = (e) => {
         let text = e.target.value;
         props.updateNewMessageBody(text);
-    }
+    };
 
 
     return (

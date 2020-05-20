@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './Header/Header';
+import HeaderContainer from './Header/HeaderContainer';
 import Navbar from './Navbar/Navbar';
-import Profile from './Profile/Profile';
+import ProfileContainer from './Profile/ProfileContainer';
 import UsersContainer from './Users/UsersContainer';
 import {BrowserRouter, Route} from 'react-router-dom';
 import DialogsContainer from './Dialogs/DialogsContainer';
@@ -13,16 +13,14 @@ function App(props) {
     return (
 
         <div className="app-page">
-            <Header/>
+            <HeaderContainer/>
             <Navbar store={props.store}/>
             <div className="app-page_content">
 
                 <Route path='/Dialogs' render=
-                    {() => <DialogsContainer store={props.store}
-                                     />}/>
+                    {() => <DialogsContainer />}/>
                 <Route path='/Profile' render=
-                    {() => <Profile store={props.store}
-                                    />}/>
+                    {() => <ProfileContainer/>}/>
                 <Route path='/Users' render=
                     {() => <UsersContainer />
                    }/>

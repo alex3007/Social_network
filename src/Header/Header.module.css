@@ -37,3 +37,14 @@
     font-family: "Lucida Calligraphy";
 
 }
+
+.loginBlock {
+    float: right;
+    margin-top: 17px;
+    margin-right: 30px;
+
+}
+.loginBlock a {
+    color: #2a588b;
+}
+
