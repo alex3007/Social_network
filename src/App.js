@@ -1,34 +1,37 @@
 import React from 'react';
 import './App.css';
-import HeaderContainer from './Header/HeaderContainer';
 import Navbar from './Navbar/Navbar';
-import ProfileContainer from './Profile/ProfileContainer';
-import UsersContainer from './Users/UsersContainer';
-import {BrowserRouter, Route} from 'react-router-dom';
-import DialogsContainer from './Dialogs/DialogsContainer';
+import {Route} from "react-router-dom";
+import DialogsContainer from "./Dialogs/DialogsContainer";
+import UsersContainer from "./Users/UsersContainer";
+import ProfileContainer from "./Profile/ProfileContainer";
+import HeaderContainer from "./Header/HeaderContainer";
+import LoginPage from "./Login/Login";
 import intro from './Assets/images/intro.png';
 
-function App(props) {
-
+const App = () => {
     return (
+        <div className='app-page'>
+            <HeaderContainer />
+            <Navbar />
+            <div className='app-page_content'>
+                <Route path='/dialogs'
+                       render={ () => <DialogsContainer /> }/>
 
-        <div className="app-page">
-            <HeaderContainer/>
-            <Navbar store={props.store}/>
-            <div className="app-page_content">
+                <Route path='/profile/:userId?'
+                       render={ () => <ProfileContainer /> }/>
 
-                <Route path='/Dialogs' render=
-                    {() => <DialogsContainer />}/>
-                <Route path='/Profile' render=
-                    {() => <ProfileContainer/>}/>
-                <Route path='/Users' render=
-                    {() => <UsersContainer />
-                   }/>
-              <img className="app-page_intro" src={intro} alt='intro'/>
-             </div>
+                <Route path='/users'
+                       render={ () => <UsersContainer /> }/>
+
+                <Route path='/login'
+                       render={ () => <LoginPage /> }/>
+
+                <img className="app-page_intro" src={intro} alt='intro'/>
+            </div>
             <footer className="footer" />
         </div>
-    );
-}
+    )
+};
 
 export default App;
