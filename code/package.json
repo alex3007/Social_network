@@ -12,7 +12,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
   },
-  "homepage": "http://alex300785.ws2.cloudpark.tech/React/Social",
+  "homepage": "https://alex3007.github.io/Social_network",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
