@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/React/Social/static/css/main.e2959e23.chunk.css",
-    "main.js": "/React/Social/static/js/main.885d590d.chunk.js",
-    "main.js.map": "/React/Social/static/js/main.885d590d.chunk.js.map",
-    "runtime~main.js": "/React/Social/static/js/runtime~main.904167d2.js",
-    "runtime~main.js.map": "/React/Social/static/js/runtime~main.904167d2.js.map",
-    "static/js/2.596f7415.chunk.js": "/React/Social/static/js/2.596f7415.chunk.js",
-    "static/js/2.596f7415.chunk.js.map": "/React/Social/static/js/2.596f7415.chunk.js.map",
-    "index.html": "/React/Social/index.html",
-    "precache-manifest.6ee5631d1aa2f8064bfebc8aa230922f.js": "/React/Social/precache-manifest.6ee5631d1aa2f8064bfebc8aa230922f.js",
-    "service-worker.js": "/React/Social/service-worker.js",
-    "static/css/main.e2959e23.chunk.css.map": "/React/Social/static/css/main.e2959e23.chunk.css.map",
-    "static/media/friend.jpg": "/React/Social/static/media/friend.595172f9.jpg",
-    "static/media/intro.png": "/React/Social/static/media/intro.b8c9a73e.png",
-    "static/media/message.png": "/React/Social/static/media/message.f0fb1b34.png",
-    "static/media/myphoto.jpg": "/React/Social/static/media/myphoto.ba0c4a8e.jpg",
-    "static/media/preloader.svg": "/React/Social/static/media/preloader.6c3daf60.svg",
-    "static/media/titlephoto.jpg": "/React/Social/static/media/titlephoto.3903a2af.jpg"
+    "main.css": "/Social_network/static/css/main.e2959e23.chunk.css",
+    "main.js": "/Social_network/static/js/main.fb500d70.chunk.js",
+    "main.js.map": "/Social_network/static/js/main.fb500d70.chunk.js.map",
+    "runtime~main.js": "/Social_network/static/js/runtime~main.93ffd6f6.js",
+    "runtime~main.js.map": "/Social_network/static/js/runtime~main.93ffd6f6.js.map",
+    "static/js/2.596f7415.chunk.js": "/Social_network/static/js/2.596f7415.chunk.js",
+    "static/js/2.596f7415.chunk.js.map": "/Social_network/static/js/2.596f7415.chunk.js.map",
+    "index.html": "/Social_network/index.html",
+    "precache-manifest.f73cd52a8926b7875b7996aacd5d2556.js": "/Social_network/precache-manifest.f73cd52a8926b7875b7996aacd5d2556.js",
+    "service-worker.js": "/Social_network/service-worker.js",
+    "static/css/main.e2959e23.chunk.css.map": "/Social_network/static/css/main.e2959e23.chunk.css.map",
+    "static/media/friend.jpg": "/Social_network/static/media/friend.595172f9.jpg",
+    "static/media/intro.png": "/Social_network/static/media/intro.b8c9a73e.png",
+    "static/media/message.png": "/Social_network/static/media/message.f0fb1b34.png",
+    "static/media/myphoto.jpg": "/Social_network/static/media/myphoto.ba0c4a8e.jpg",
+    "static/media/preloader.svg": "/Social_network/static/media/preloader.6c3daf60.svg",
+    "static/media/titlephoto.jpg": "/Social_network/static/media/titlephoto.3903a2af.jpg"
   }
 }
