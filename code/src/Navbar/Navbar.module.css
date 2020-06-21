@@ -3,6 +3,7 @@
 .navbar{
     grid-area: n;
     background-color: #edeef0;
+    min-width: 120px;
 }
 
 .item{
@@ -18,7 +19,7 @@
 .link{
     color: #2a588b;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 
 }
 
