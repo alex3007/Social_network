@@ -12,5 +12,5 @@ const Sidebar = (props) => {
        {sidebarFriends}
 </div>
 );
-}
+};
 export default Sidebar;
