@@ -4,24 +4,26 @@ import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatus from "./ProfileStatus";
 import myphoto from '../../Assets/images/myphoto.jpg';
 import titlephoto from '../../Assets/images/titlephoto.jpg';
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
+
     if (!props.profile) {
-        return <Preloader/>
+        return <Preloader />
     }
 
     return (
-        <div className={cls.content}>
-            <div className={cls.image_container}>
-                <img className={cls.content_image} src={titlephoto}/>
-            </div>
-            <div className={cls.description}>
-                <img src={myphoto}/>
-                <img src={props.profile.photos.large}/>
-                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+        <div>
+            {/*  <div>
+                <img
+                    src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350'/>
+            </div>*/}
+            <div className={cls.descriptionBlock}>
+                <img src={props.profile.photos.large} />
+                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
             </div>
         </div>
     )
-};
+}
 
 export default ProfileInfo;

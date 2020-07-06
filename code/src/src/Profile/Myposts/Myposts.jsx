@@ -1,39 +1,47 @@
 import React from 'react';
-import cls from './Myposts.module.css';
+import s from './Myposts.module.css';
 import Post from './Post/Post';
+import {Field, reduxForm} from "redux-form";
+import {maxLengthCreator, required} from "../../utils/validators/validators";
+import {Textarea} from "../../common/FormsControls/FormsControls";
 
+const maxLength10 = maxLengthCreator(10);
 
-const Myposts = (props) => {
+let AddNewPostForm = (props) => {
+    return <form onSubmit={props.handleSubmit}>
+        <div>
+            <Field name="newPostText" component={Textarea} placeholder={"Post message"}
+                   validate={[required, maxLength10]} />
+        </div>
+        <div>
+            <button>Add post</button>
+        </div>
+    </form>;
+}
 
-    let postElements = props.posts
-        .map( message => <Post message={message.message} likesCount={message.likesCount} />)
+let AddNewPostFormRedux = reduxForm({form: "ProfileAddNewPostForm"})(AddNewPostForm);
 
-    let newPostElement  = React.createRef();
+const MyPosts = (props) => {
+    let postsElements =
+        props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>);
 
-    let onAddPost =() =>{
-        props.addPost();
-          };
-    let onPostChange =() =>{
-        let text = newPostElement.current.value;
-        props.updateNewPostText(text);
-    };
+    let newPostElement = React.createRef();
 
+    let onAddPost = (values) => {
+        props.addPost(values.newPostText);
+    }
 
     return (
-
-        <div className={cls.postsBlock}><h3> My posts</h3>
-            <div>
-                <textarea onChange={onPostChange}
-                          ref={newPostElement}
-                          value={props.newPostText}
-                          className={cls.textArea}></textarea>
-                <button onClick={onAddPost} className={cls.buttonAddPost}>Add post</button>
-
-            </div>
-            <div>
-                {postElements}
+        <div className={s.postsBlock}>
+            <h3>My posts</h3>
+            <AddNewPostFormRedux onSubmit={onAddPost} />
+            <div className={s.posts}>
+                {postsElements}
             </div>
         </div>
-    );
+    )
 }
-export default Myposts;
+
+
+
+export default MyPosts;
