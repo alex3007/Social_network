@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8a6c09904d78a31bb91246641b17e27",
+    "revision": "7cfc6209d11ec8a01311f1da27a67e9b",
     "url": "/Social_network/index.html"
   },
   {
-    "revision": "fb96d27b97e775f2e657",
+    "revision": "bf3a294cefb093ab1ccd",
     "url": "/Social_network/static/css/3.6282e4bc.chunk.css"
   },
   {
-    "revision": "3f9c506120a892e09b1c",
+    "revision": "37eb9e31f0fe1b7a445e",
     "url": "/Social_network/static/css/4.806497ed.chunk.css"
   },
   {
-    "revision": "bafc20af2c8c017edf47",
+    "revision": "02ffa6e2dc2017c642cb",
     "url": "/Social_network/static/css/main.838cc686.chunk.css"
   },
   {
@@ -20,20 +20,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Social_network/static/js/2.2af17d75.chunk.js"
   },
   {
-    "revision": "fb96d27b97e775f2e657",
-    "url": "/Social_network/static/js/3.c43c2d4f.chunk.js"
+    "revision": "bf3a294cefb093ab1ccd",
+    "url": "/Social_network/static/js/3.50451694.chunk.js"
   },
   {
-    "revision": "3f9c506120a892e09b1c",
-    "url": "/Social_network/static/js/4.621cb844.chunk.js"
+    "revision": "37eb9e31f0fe1b7a445e",
+    "url": "/Social_network/static/js/4.1a2c1770.chunk.js"
   },
   {
-    "revision": "bafc20af2c8c017edf47",
-    "url": "/Social_network/static/js/main.ec47d2cd.chunk.js"
+    "revision": "02ffa6e2dc2017c642cb",
+    "url": "/Social_network/static/js/main.a46f8c93.chunk.js"
   },
   {
-    "revision": "c167234c7fe4cf25396b",
-    "url": "/Social_network/static/js/runtime~main.c4e80779.js"
+    "revision": "c00b79860d9568894b58",
+    "url": "/Social_network/static/js/runtime~main.5f06e6e3.js"
   },
   {
     "revision": "595172f9bbf8352da92accece4ddbfe9",
@@ -54,9 +54,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9044b20ba9e172e33e192a148863925a",
     "url": "/Social_network/static/media/spinning-circles.9044b20b.svg"
-  },
-  {
-    "revision": "3903a2af2055cf100c53ceee4a57b62d",
-    "url": "/Social_network/static/media/titlephoto.3903a2af.jpg"
   }
 ]);
