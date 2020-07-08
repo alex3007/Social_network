@@ -17,7 +17,7 @@ let AddNewPostForm = (props) => {
             <button>Add post</button>
         </div>
     </form>;
-}
+};
 
 let AddNewPostFormRedux = reduxForm({form: "ProfileAddNewPostForm"})(AddNewPostForm);
 
@@ -29,7 +29,7 @@ const MyPosts = (props) => {
 
     let onAddPost = (values) => {
         props.addPost(values.newPostText);
-    }
+    };
 
     return (
         <div className={s.postsBlock}>
@@ -40,7 +40,7 @@ const MyPosts = (props) => {
             </div>
         </div>
     )
-}
+};
 
 
 

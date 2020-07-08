@@ -5,34 +5,34 @@ import {NavLink} from "react-router-dom";
 const Navbar = () => {
     return (
         <div className={cls.navbar}>
-            <div className={cls.item}>
+            <div className={cls.navbarItem}>
                 <i className="fa fa-address-book"/>
-                <NavLink to="/profile" className={cls.link} activeClassName={cls.active}>Profile</NavLink>
+                <NavLink to="/profile" className={cls.navbarLink} activeClassName={cls.active}>Profile</NavLink>
             </div>
-            <div className={`${cls.item} ${cls.activel}`}>
+            <div className={`${cls.navbarItem} ${cls.activel}`}>
                 <i className="fa fa-comments"/>
-                <NavLink to="/dialogs" className={cls.link} activeClassName={cls.active}>Messages</NavLink>
+                <NavLink to="/dialogs" className={cls.navbarLink} activeClassName={cls.active}>Messages</NavLink>
             </div>
-            <div className={`${cls.item} ${cls.activel}`}>
+            <div className={`${cls.navbarItem} ${cls.activel}`}>
                 <i className="fa fa-user"/>
-                <NavLink to="/users" className={cls.link} activeClassName={cls.active}>Users</NavLink>
+                <NavLink to="/users" className={cls.navbarLink} activeClassName={cls.active}>Users</NavLink>
             </div>
 
-            <div className={cls.item}>
+            <div className={cls.navbarItem}>
                 <i className="fa fa-newspaper-o"/>
-                <NavLink className={cls.link} activeclassName={cls.active}>News</NavLink>
+                <NavLink className={cls.navbarLink} activeclassName={cls.active}>News</NavLink>
             </div>
-            <div className={cls.item}>
+            <div className={cls.navbarItem}>
                 <i className="fa fa-headphones"/>
-                <NavLink className={cls.link} activeclassName={cls.active}>Music</NavLink>
+                <NavLink className={cls.navbarLink} activeclassName={cls.active}>Music</NavLink>
             </div>
-            <div className={cls.item}>
+            <div className={cls.navbarItem}>
                 <i className="fa fa-play"/>
-                <NavLink className={cls.link} activeclassName={cls.active}> Video</NavLink>
+                <NavLink className={cls.navbarLink} activeclassName={cls.active}> Video</NavLink>
             </div>
-            <div className={cls.item}>
+            <div className={cls.navbarItem}>
                 <i className="fa fa-user-circle "/>
-                <NavLink className={cls.link} activeclassName={cls.active}>Friends</NavLink>
+                <NavLink className={cls.navbarLink} activeclassName={cls.active}>Friends</NavLink>
             </div>
 
         </div>

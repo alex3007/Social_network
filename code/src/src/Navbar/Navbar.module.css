@@ -1,28 +1,25 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 .navbar{
-    grid-area: n;
     background-color: #edeef0;
     min-width: 120px;
+    height: 100%;
 }
 
-.item{
+.navbarItem{
     margin-bottom: 5px;
-    margin-left: 10px;
 }
 
-.item:hover{
+.navbarItem:hover{
     background-color: #dae1e8;
 }
 
 
-.link{
+.navbarLink{
     color: #2a588b;
     text-decoration: none;
     font-size: 18px;
-
 }
-
 
 i {
     color: #2a588b;

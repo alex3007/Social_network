@@ -1,14 +1,13 @@
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
+    height: 400px;
 
 }
 
 .dialogsItems {
-
     padding: 5px;
     color: #2a588b;
-
 }
 
 .dialogsItems .active {
@@ -16,19 +15,16 @@
 }
 
 .dialog {
-
     color: #2a588b;
 }
 
 .messages {
     padding: 5px;
-
 }
 
 .message {
     color: #2a588b;
 }
-
 
 .textArea, .buttonAddPost{
     height: 20px;

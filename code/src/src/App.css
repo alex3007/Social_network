@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.app-page{
+.app{
     display: grid;
     grid-template-areas:
      "h h"
@@ -13,14 +13,26 @@
     grid-gap: 10px;
 }
 
-.app-page_content {
+.appPageContainer{
+  display: flex;
+}
 
+.appPageNavbar{
     background-color: #edeef0;
+    height: auto;
 
 }
 
+.appPageContent {
 
-.app-page_intro {
+    background-color: #edeef0;
+    width: 100%;
+    margin-left: 9px;
+    height: auto;
+
+}
+
+.appPageIntro {
     float: bottom;
     max-width: 100px;
     position: fixed;
