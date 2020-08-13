@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from "./Paginator.module.css";
+import cls from "./Paginator.module.css";
 import cn from "classnames";
 
 let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 10}) => {
@@ -17,25 +17,35 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
     let rightPortionPageNumber = portionNumber * portionSize;
 
 
-    return <div className={cn(styles.paginator)}>
-        { portionNumber > 1 &&
-        <button onClick={() => { setPortionNumber(portionNumber - 1) }}>PREV</button> }
+    return <div className={cn(cls.paginator)}>
 
+        <div className={cls.pageNumbers}>
             {pages
-                .filter(p => p >= leftPortionPageNumber && p<=rightPortionPageNumber)
+                .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
                 .map((p) => {
-                return <span className={ cn({
-                    [styles.selectedPage]: currentPage === p
-                }, styles.pageNumber) }
-                             key={p}
-                             onClick={(e) => {
-                                 onPageChanged(p);
-                             }}>{p}</span>
-            })}
-        { portionCount > portionNumber &&
-            <button onClick={() => { setPortionNumber(portionNumber + 1) }}>NEXT</button> }
+                    return <span className={cn({
+                        [cls.selectedPage]: currentPage === p
+                    }, cls.pageNumber)}
+                                 key={p}
+                                 onClick={(e) => {
+                                     onPageChanged(p);
+                                 }}>{p}</span>
+                })}
+        </div>
+        <div className={cls.buttons}>
+
+            {portionCount > portionNumber &&
+        <button className={cls.pageBtn} onClick={() => {
+            setPortionNumber(portionNumber + 1)
+        }}>NEXT</button>}
+
+            {portionNumber > 1 &&
+            <button className={cls.pageBtn} onClick={() => {
+                setPortionNumber(portionNumber - 1)
+            }}>PREV</button>}
 
 
+        </div>
     </div>
 }
 

@@ -2,6 +2,15 @@
     padding: 10px;
 }
 
+.postsBlock h3 {
+    color: #ffffff;
+    margin: 15px 0 10px 0;
+    width: 230px;
+    background-color: #7896ad;
+    padding: 4px;
+    text-align: center;
+}
+
 .textArea, .buttonAddPost{
     height: 20px;
     margin: 10px 0;
@@ -10,3 +19,12 @@
     vertical-align: top;
 }
 
+
+.postBtn{
+    width: 100px;
+    font-size: 15px;
+    padding: 5px 0;
+    color: #2a588b !important;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

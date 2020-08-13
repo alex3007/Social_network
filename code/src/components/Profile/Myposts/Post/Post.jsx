@@ -4,15 +4,16 @@ import friend from '../../../../assets/images/friend.jpg';
 
 const Post = (props) => {
 
-        return (
+    return (
+        <div className={cls.postItems}>
+            <div className={cls.item}>
 
-        <div className={cls.item}>
+                <img src={friend} alt="avatar"/>
 
-            <img src={friend} alt="avatar"/>
-
-            {props.message}
-            <p>likes:{props.likesCount}</p>
+                {props.message}
+            </div>
+            <p><i className='fa fa-heart'/>{props.likesCount}</p>
         </div>
     );
-    };
-    export default Post;
+};
+export default Post;

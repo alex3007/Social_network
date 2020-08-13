@@ -1,0 +1,37 @@
+.form h1{
+    color: #2a588b !important;
+    margin-bottom: 20px;
+}
+.form p{
+    color: #2a588b !important;
+    margin-bottom: 10px;
+}
+
+.formSummaryError {
+    border: red 1px solid;
+    padding: 5px;
+    color: red;
+}
+
+.form{
+    height: 400px;
+    margin-left: 10px;
+}
+
+.loginBtn{
+    width: 100px;
+    font-size: 15px;
+    padding: 5px 0;
+    color: #2a588b !important;
+    margin-top: 20px;
+}
+
+.checkBox{
+    margin-top: 20px;
+    color: #2a588b;
+    display: flex;
+}
+.checkBox p{
+    margin-left: 10px;
+    margin-top: 3px;
+}

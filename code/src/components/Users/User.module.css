@@ -1,8 +1,40 @@
 .userPhoto {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
 }
 
 .selectedPage {
     font-weight: bold;
+}
+
+.userContainer{
+    box-shadow: #7896ad 0 0  5px;
+    width: 230px;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.flexContainer{
+    display: flex;
+    flex-flow: row;
+    justify-items: center;
+
+}
+
+
+.userBtn{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    color: #2a588b !important;
+    margin: auto 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.userBtn:hover{
+   background-color: #dae1e8;
 }

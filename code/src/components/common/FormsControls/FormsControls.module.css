@@ -9,13 +9,16 @@
     color: red;
 }
 
-.formSummaryError {
-    border: red 1px solid;
-    padding: 5px;
-    color: red;
+.input{
+    height: 30px;
+    font-size: 15px;
+    padding: 0 5px;
 }
 
-.form{
-    height: 400px;
-    margin-left: 10px;
+.textarea{
+    width: 220px;
+    height: 70px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
 }

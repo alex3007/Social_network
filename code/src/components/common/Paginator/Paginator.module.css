@@ -1,13 +1,54 @@
 
 .paginator {
-    margin: 10px;
+    margin: 20px 20px;
+    display: flex;
+    flex-flow: row;
+
+}
+.pageNumbers{
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .pageNumber {
     padding: 2px;
     border: 1px solid grey;
-}
+    margin: 2px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
 
+}
+.pageNumber:hover {
+    background-color: rgba(120, 150, 173, 0.77);
+    color: #ffffff;
+
+}
 .pageNumber.selectedPage {
     font-weight: bold;
-    border-color: black;
+    color: #ffffff;
+    background-color: #7896ad;
+}
+
+.buttons{
+    display: flex;
+    flex-flow: column;
+}
+
+.pageBtn{
+    margin: auto 10px;
+    width: 70px;
+    padding: 5px;
+    font-size: 15px;
+    color: #2a588b !important;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.pageBtn:hover{
+    background-color: #dae1e8;
 }

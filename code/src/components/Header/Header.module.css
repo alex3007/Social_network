@@ -47,7 +47,32 @@
     margin-left: auto;
 
 }
-.headerLogin a {
+.headerBtn {
+    width: 80px;
     color: #2a588b;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #dae1e8;
+    text-decoration: none;
+    border: none;
+    font-size: 15px;
 }
 
+.headerBtn:hover {
+    background-color: rgba(122, 138, 173, 0.49);
+    color: #ffffff;
+}
+
+.loginContainer{
+    display: flex;
+    flex-flow: row;
+    justify-items: center;
+}
+
+.nickName{
+    padding: 3px 10px 0 10px;
+    border-radius: 50%;
+    background-color: #4287b3;
+    color: #ffffff;
+    margin-right: 3px;
+}

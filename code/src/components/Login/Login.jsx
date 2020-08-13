@@ -5,25 +5,29 @@ import {required} from "../utils/validators/validators";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
-import style from "../common/FormsControls/FormsControls.module.css"
+import cls from "./Login.module.css"
 
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
         <form  onSubmit={handleSubmit}>
-            {createField("Email", "email", [required], Input)}
+            {createField("Email","email", [required], Input)}
+            <p> Enter: <b>free@samuraijs.com</b></p>
             {createField("Password", "password", [required], Input, {type: "password"})}
-            {createField(null, "rememberMe", [], Input, {type: "checkbox"}, "remember me")}
-
+            <p> Enter: <b>free</b></p>
+            <div className={cls.checkBox}>
+            {createField(null, "rememberMe", [], Input, {type: "checkbox"})}
+            <p>- remember me</p>
+            </div>
             { captchaUrl && <img src={captchaUrl} />}
             { captchaUrl &&  createField("Symbols from image", "captcha", [required], Input, {}) }
 
 
-            {error && <div className={style.formSummaryError}>
+            {error && <div className={cls.formSummaryError}>
                 {error}
             </div>
             }
             <div>
-                <button>Login</button>
+                <button className={cls.loginBtn}>Login</button>
             </div>
         </form>
     )
@@ -40,13 +44,9 @@ const Login = (props) => {
         return <Redirect to={"/profile"}/>
     }
 
-    return <div className={style.form}>
+    return <div className={cls.form}>
         <h1>Login</h1>
         <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl}/><br/>
-        <p><b>For the test vuing enter:</b><br/>
-            Email: free@samuraijs.com<br/>
-            Password: free<br/>
-        </p>
     </div>
 };
 const mapStateToProps = (state) => ({

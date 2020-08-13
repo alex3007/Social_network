@@ -1,29 +1,32 @@
-.dialogs {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
+.dialogsArea{
     height: 400px;
-
+    margin-left: 10px;
 }
 
-.dialogsItems {
+.dialogs {
+    display: flex;
+    flex-flow: row;
+}
+
+.names{
     padding: 5px;
-    color: #2a588b;
+    margin-right: 10px;
 }
-
-.dialogsItems .active {
-    color: #2a588b;
+.name{
+    color: #2a588b!important;
+    text-decoration: none;
+    font-weight: bold;
 }
-
-.dialog {
-    color: #2a588b;
+.name:hover{
+    color: #2a588b!important;
+    text-decoration: underline  ;
+    font-weight: bold;
 }
 
 .messages {
     padding: 5px;
-}
-
-.message {
     color: #2a588b;
+    width: 300px!important;
 }
 
 .textArea, .buttonAddPost{
@@ -34,6 +37,19 @@
     vertical-align: top;
 }
 
-h3{
-    color: #2a588b;
+.dialogsArea h3{
+    color: #ffffff;
+    margin: 15px 0;
+    width: 230px;
+    background-color: #7896ad;
+    padding: 4px;
+    text-align: center;
+}
+
+.messageBtn{
+    width: 100px;
+    font-size: 15px;
+    padding: 5px 0;
+    color: #2a588b !important;
+    margin-top: 10px;
 }
