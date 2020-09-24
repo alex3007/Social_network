@@ -4,7 +4,7 @@ import {Textarea} from "../../common/FormsControls/FormsControls";
 import {maxLengthCreator, required} from "../../utils/validators/validators";
 import cls from '../Dialogs.module.css'
 
-const maxLength100 = maxLengthCreator(100);
+const maxLength100 = maxLengthCreator(30);
 
 const AddMessageForm = (props) => {
     return (
@@ -14,8 +14,8 @@ const AddMessageForm = (props) => {
                        validate={[required, maxLength100]}
                        placeholder='Enter your message' name="newMessageBody" />
             </div>
-            <div>
-                <button className={cls.messageBtn}>Send</button>
+            <div className={cls.buttonArea}>
+                <button className='button'>Send</button>
             </div>
         </form>
     )

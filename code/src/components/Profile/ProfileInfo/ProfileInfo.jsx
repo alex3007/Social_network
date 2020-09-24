@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import cls from './ProfileInfo.module.css';
 import Preloader from "../../common/Preloader/Preloader";
 import userPhoto from '../../../assets/images/myphoto.jpg';
@@ -28,50 +28,54 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
     };
 
     return (
-        <div>
-            <div className={cls.description}>
-                <img src={profile.photos.large || userPhoto} className={cls.mainPhoto}/>
-                {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
-
-                { editMode
-                    ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
-                    : <ProfileData goToEditMode={() => {setEditMode(true)} } profile={profile} isOwner={isOwner}/> }
-
-                <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
+        <div className={cls.profileContainer}>
+            <div className={cls.profile}>
+                <div className={cls.profileImage}>
+                    <img src={profile.photos.large || userPhoto} className={cls.mainPhoto} alt='avatar'/>
+                    {isOwner && <div><input  className={cls.changeImage} type={"file"} onChange={onMainPhotoSelected}/>
+                    <label className={cls.changeImageLabel}>Change image</label>
+                    </div>}
+                </div>
+                <div className={cls.profileDescription}>
+                    {editMode
+                        ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
+                        : <ProfileData goToEditMode={() => {
+                            setEditMode(true)
+                        }} profile={profile} isOwner={isOwner}/>}
+                </div>
+                <div className={cls.profileStatus}>
+                    <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
+                </div>
             </div>
+
         </div>
     )
 };
 
 const ProfileData = ({profile, isOwner, goToEditMode}) => {
-    return <div>
-        {isOwner && <div><button onClick={goToEditMode}>edit</button></div>}
-        <div>
-            <b>Full name</b>: {profile.fullName}
+    return <div className={cls.profileForm}>
+        <div className={cls.profileData}>
+            <b>Full name:</b> {profile.fullName}
+            <hr/>
         </div>
-        <div>
+        <div className={cls.profileData}>
             <b>Looking for a job</b>: {profile.lookingForAJob ? "yes" : "no"}
+            <hr/>
         </div>
         {profile.lookingForAJob &&
-        <div>
-            <b>My professional skills</b>: {profile.lookingForAJobDescription}
+        <div className={cls.profileData}>
+            <b>My professional skills:</b> {profile.lookingForAJobDescription}
+            <hr/>
         </div>
         }
-
-        <div>
-            <b>About me</b>: {profile.aboutMe}
+        <div className={cls.profileData}>
+            <b>About me:</b> {profile.aboutMe}
+            <hr/>
         </div>
-        <div>
-            <b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
-            return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
-        })}
-        </div>
+        {isOwner && <div>
+            <button className='button' onClick={goToEditMode}>Edit</button>
+        </div>}
     </div>
-};
-
-
-const Contact = ({contactTitle, contactValue}) => {
-    return <div className={cls.contact}><b>{contactTitle}</b>: {contactValue}</div>
 };
 
 export default ProfileInfo;

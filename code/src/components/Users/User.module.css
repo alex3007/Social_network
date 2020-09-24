@@ -8,18 +8,18 @@
     font-weight: bold;
 }
 
-.userContainer{
-    box-shadow: #7896ad 0 0  5px;
-    width: 230px;
-    margin: 20px;
-    border-radius: 20px;
-    padding: 10px;
+.userCard{
+    margin: 10px;
+    border-radius: 60px 20px 60px 20px;
+    padding: 40px 10px 20px 10px;
+    width: 170px;
 }
 
-.flexContainer{
+.userInfo{
     display: flex;
-    flex-flow: row;
-    justify-items: center;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 20px;
 
 }
 
@@ -29,7 +29,7 @@
     height: 40px;
     font-size: 15px;
     color: #2a588b !important;
-    margin: auto 10px;
+    margin: 15px 0;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -37,4 +37,39 @@
 
 .userBtn:hover{
    background-color: #dae1e8;
+}
+.buttonArea{
+    background-color: #ffffff;
+    box-shadow: #808890 0 0  10px;
+    padding: 10px;
+    border-radius: 0 0 40px 10px;
+    width: 150px;
+    text-align: center;
+ }
+
+.usersContainer{
+    display: flex;
+}
+.users{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    max-width: 450px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.userData{
+    color: #4287b3;
+    text-align: center;
+    padding: 30px 10px;
+    background-color: rgba(120, 150, 173, 0.1);
+    width: 150px;
+    border-radius: 60px 20px 0 0;
+}
+
+.preloader{
+    margin: 10px auto;
+    width: 100px;
 }

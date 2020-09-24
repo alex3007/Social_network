@@ -1,8 +1,27 @@
-.form h1{
-    color: #2a588b !important;
-    margin-bottom: 20px;
+.formContainer{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    min-height: 400px;
 }
-.form p{
+.formCard{
+    background-color: #ffffff;
+    width: 300px;
+    margin: 20px auto 20px auto;
+    padding: 3px;
+    height: 390px;
+    box-shadow: #808890 0 0 7px;
+}
+.formBody{
+    margin: 5px 20px;
+}
+.formCard h2{
+    color: #ffffff;
+    margin-bottom: 20px;
+    background-color: #7896ad;
+    padding:5px 10px 5px 20px ;
+}
+.formCard p{
     color: #2a588b !important;
     margin-bottom: 10px;
 }
@@ -12,20 +31,6 @@
     padding: 5px;
     color: red;
 }
-
-.form{
-    height: 400px;
-    margin-left: 10px;
-}
-
-.loginBtn{
-    width: 100px;
-    font-size: 15px;
-    padding: 5px 0;
-    color: #2a588b !important;
-    margin-top: 20px;
-}
-
 .checkBox{
     margin-top: 20px;
     color: #2a588b;

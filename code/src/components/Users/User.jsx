@@ -6,14 +6,19 @@ import userPhoto from "../../assets/images/friend.jpg";
 
 let User = ({user, followingInProgress, unfollow, follow}) => {
     return (
-        <div className={cls.userContainer}>
-                <span className={cls.flexContainer}>
-                    <div>
-                       <NavLink to={'/profile/' + user.id}>
+        <div className={cls.userCard}>
+            <div className={cls.userInfo}>
+                <div className={cls.userData}>
+                    <NavLink to={'/profile/' + user.id}>
                         <img src={user.photos.small != null ? user.photos.small : userPhoto}
                              className={cls.userPhoto}/>
-                       </NavLink>
-                    </div>
+                    </NavLink>
+                    <span>
+                        <div><p><b>Name:</b><br/> {user.name}</p></div>
+                        <div><p>{user.status}</p></div>
+                    </span>
+                </div>
+                <div className={cls.buttonArea}>
                     {user.followed
                         ? <button className={cls.userBtn} disabled={followingInProgress
                             .some(id => id === user.id)}
@@ -26,18 +31,10 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
                                       follow(user.id)
                                   }}>
                             Follow</button>}
-                </span>
-            <span>
-                    <span>
-                        <div><p><b>Name:</b> {user.name}</p></div>
-                        <div><p>{user.status}</p></div>
-                    </span>
-                    <span>
-                        <div><p><b>Country:</b> {"user.location.country"}</p></div>
-                        <div><p><b>City:</b> {"user.location.city"}</p></div>
-                    </span>
-                </span>
-        </div>)
+                </div>
+            </div>
+        </div>
+    )
 };
 
 export default User;

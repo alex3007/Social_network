@@ -20,17 +20,18 @@ const Dialogs = (props) => {
 
     return (
         <div className={cls.dialogsArea}>
-            <h3>Messages</h3>
-            <div className={cls.dialogs}>
-                <div className={cls.names}>
-                    {dialogsElements}
+            <h2>Messages</h2>
+                <div className={cls.dialogs}>
+                    <div className={cls.names}>
+                        {dialogsElements}
+                    </div>
+                    <div className={cls.messages}>
+                        {messagesElements}
+                    </div>
                 </div>
-                <div className={cls.messages}>
-                    {messagesElements}
-                </div>
-            </div>
-            <div>
+            <div className={cls.textArea}>
                 <AddMessageForm onSubmit={addNewMessage}/>
+
             </div>
         </div>
     )

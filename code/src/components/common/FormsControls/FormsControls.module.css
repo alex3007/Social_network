@@ -13,12 +13,18 @@
     height: 30px;
     font-size: 15px;
     padding: 0 5px;
+    border: #345f93 1px solid  ;
+    color: #2a588b;
+    border-radius: 3px;
 }
 
 .textarea{
-    width: 220px;
-    height: 70px;
+    width: 270px;
+    height: 30px;
     margin-top: 10px;
     padding: 5px;
     font-size: 15px;
+    border-radius: 3px;
+    border: #345f93 1px solid  ;
+    color: #2a588b;
 }

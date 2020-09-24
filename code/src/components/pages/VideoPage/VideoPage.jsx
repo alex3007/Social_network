@@ -3,7 +3,7 @@ import cls from './VideoPage.module.css';
 import video from "../../../assets/images/video.png";
 
 const VideoPage = (props) => {
-    let item = <div>
+    let item = <div className={cls.item}>
                <img src={video}/>
                 <h3>VideoTitle</h3>
                </div>

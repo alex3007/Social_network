@@ -1,19 +1,32 @@
 .dialogsArea{
-    height: 400px;
-    margin-left: 10px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
 }
-
+.dialogsArea:hover .dialogs{
+    min-height:70px;
+    transition: all 0.5s;
+}
 .dialogs {
     display: flex;
     flex-flow: row;
+    width: 390px;
+    margin: 0 auto;
+    padding: 10px 0 ;
+    background-color: rgba(120, 150, 173, 0.1);
+    min-height:0;
+    overflow: hidden;
+    transition: all 0.5s;
 }
 
 .names{
     padding: 5px;
     margin-right: 10px;
+    padding-left: 20px;
 }
 .name{
-    color: #2a588b!important;
+    color: #2a588b;
     text-decoration: none;
     font-weight: bold;
 }
@@ -26,30 +39,30 @@
 .messages {
     padding: 5px;
     color: #2a588b;
-    width: 300px!important;
 }
 
-.textArea, .buttonAddPost{
-    height: 20px;
-    margin: 10px 0;
-    margin-right: 5px;
-    display: inline-block;
-    vertical-align: top;
+
+.textArea{
+    border: #808890 solid 1px;
+    width: 370px;
+    border-radius: 5px 5px 20px 5px;
+    background-color: #ffffff;
+    box-shadow: #808890 0 0 5px;
+    padding:5px 5px 15px 20px;
+    margin: 0 auto 10px auto;
 }
 
-.dialogsArea h3{
+.dialogsArea h2{
     color: #ffffff;
-    margin: 15px 0;
-    width: 230px;
     background-color: #7896ad;
-    padding: 4px;
-    text-align: center;
+    padding:5px 10px 5px 20px ;
+    border: #808890 solid 1px;
+    width: 360px;
+    border-radius: 20px 5px 5px 5px;
+    box-shadow: #808890 0 0 5px;
+    margin: 20px auto 0 auto;
 }
 
-.messageBtn{
-    width: 100px;
-    font-size: 15px;
-    padding: 5px 0;
-    color: #2a588b !important;
+.buttonArea{
     margin-top: 10px;
 }

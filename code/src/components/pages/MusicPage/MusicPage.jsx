@@ -3,7 +3,7 @@ import cls from './MusicPage.module.css';
 import music from "../../../assets/images/music.png";
 
 const MusicPage = (props) => {
-    let item = <div>
+    let item = <div className={cls.item}>
         <img src={music}/>
         <h3>TreckTitle</h3>
     </div>

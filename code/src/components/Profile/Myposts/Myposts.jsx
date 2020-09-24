@@ -5,7 +5,7 @@ import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../utils/validators/validators";
 import {Textarea} from "../../common/FormsControls/FormsControls";
 
-const maxLength10 = maxLengthCreator(10);
+const maxLength10 = maxLengthCreator(55);
 
 let AddNewPostForm = (props) => {
     return <form onSubmit={props.handleSubmit}>
@@ -14,7 +14,7 @@ let AddNewPostForm = (props) => {
                    validate={[required, maxLength10]}/>
         </div>
         <div>
-            <button className={cls.postBtn}>Add post</button>
+            <button className='button'>Add post</button>
         </div>
     </form>;
 };
@@ -33,12 +33,13 @@ const MyPosts = (props) => {
 
     return (
         <div className={cls.postsBlock}>
-            <h3>My posts</h3>
+            <h2>My posts</h2>
             <div className={cls.posts}>
                 {postsElements}
             </div>
-            <AddNewPostFormRedux onSubmit={onAddPost}/>
-
+            <div className={cls.textArea}>
+                <AddNewPostFormRedux onSubmit={onAddPost}/>
+            </div>
         </div>
     )
 };

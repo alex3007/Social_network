@@ -1,25 +1,33 @@
 
 .paginator {
-    margin: 20px 20px;
     display: flex;
     flex-flow: row;
-
+    justify-content: center;
+}
+.paginatorArea{
+    display: flex;
+    flex-flow: row;
+    width:300px;
+    padding: 20px;
+    border-radius: 10px 20px 10px 30px;
 }
 .pageNumbers{
-    width: 200px;
+    width: 210px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .pageNumber {
     padding: 2px;
-    border: 1px solid grey;
+    border: 1px solid #7896ad;
     margin: 2px;
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
     width: 30px;
     text-align: center;
+    box-shadow: #808890 0 0 3px;
+    color: #2a588b;
 
 }
 .pageNumber:hover {

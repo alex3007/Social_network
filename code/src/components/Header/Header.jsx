@@ -10,9 +10,18 @@ const Header = (props) => {
                 <img className={cls.headerLogo} src={title}/>
                 <p className={cls.headerTitle}>Сheerful conversation!</p>
                 <div className={cls.headerLogin}>
-                    {props.isAuth
-                        ? <div className={cls.loginContainer}> <div className={cls.nickName}>{props.login}</div> <button className={cls.headerBtn} onClick={props.logout}>Log out</button></div>
-                        : <NavLink className={cls.headerBtn} to={'/login'}>Login</NavLink>}
+                    {props.isAuth ?
+                        <div className={cls.loginContainer}>
+                            <div className={cls.nickName}>
+                                {props.login}
+                            </div>
+                            <button className={cls.headerBtn} onClick={props.logout}>Log out</button>
+                        </div>
+                        : <NavLink to={'/login'}>
+                            <button className={cls.headerBtn}>
+                                Log in
+                            </button>
+                        </NavLink>}
                 </div>
             </div>
         </header>

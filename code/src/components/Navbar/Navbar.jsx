@@ -15,6 +15,8 @@ const Navbar = () => {
             <NavLink to="/users" className={cls.navbarLink} activeClassName={cls.active}>
                 <i className="fa fa-user"/>Users</NavLink>
 
+            <NavLink to="/friends" className={cls.navbarLink} activeClassName={cls.active}>
+                <i className="fa fa-user-circle "/>Friends</NavLink>
 
             <NavLink to="/news" className={cls.navbarLink} activeClassName={cls.active}>
                 <i className="fa fa-newspaper-o"/>News</NavLink>
@@ -24,9 +26,6 @@ const Navbar = () => {
 
             <NavLink to="/video" className={cls.navbarLink} activeClassName={cls.active}>
                 <i className="fa fa-play"/> Video</NavLink>
-
-            <NavLink to="/friends" className={cls.navbarLink} activeClassName={cls.active}>
-                <i className="fa fa-user-circle "/>Friends</NavLink>
 
         </div>
     )

@@ -9,25 +9,23 @@ import cls from "./Login.module.css"
 
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
-        <form  onSubmit={handleSubmit}>
-            {createField("Email","email", [required], Input)}
+        <form onSubmit={handleSubmit}>
+            {createField("Email", "email", [required], Input)}
             <p> Enter: <b>free@samuraijs.com</b></p>
             {createField("Password", "password", [required], Input, {type: "password"})}
             <p> Enter: <b>free</b></p>
             <div className={cls.checkBox}>
-            {createField(null, "rememberMe", [], Input, {type: "checkbox"})}
-            <p>- remember me</p>
+                {createField(null, "rememberMe", [], Input, {type: "checkbox"})}
+                <p>- remember me</p>
             </div>
-            { captchaUrl && <img src={captchaUrl} />}
-            { captchaUrl &&  createField("Symbols from image", "captcha", [required], Input, {}) }
-
-
+            {captchaUrl && <img src={captchaUrl}/>}
+            {captchaUrl && createField("Symbols from image", "captcha", [required], Input, {})}
             {error && <div className={cls.formSummaryError}>
                 {error}
             </div>
             }
             <div>
-                <button className={cls.loginBtn}>Login</button>
+                <button className='button'>Log in</button>
             </div>
         </form>
     )
@@ -44,9 +42,14 @@ const Login = (props) => {
         return <Redirect to={"/profile"}/>
     }
 
-    return <div className={cls.form}>
-        <h1>Login</h1>
-        <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl}/><br/>
+    return <div className={cls.formContainer}>
+        <div className={cls.formCard}>
+            <h2>Log in</h2>
+            <div className={cls.formBody}>
+                <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl}/>
+                <br/>
+            </div>
+        </div>
     </div>
 };
 const mapStateToProps = (state) => ({

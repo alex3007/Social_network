@@ -1,23 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.app{
+.app {
     display: grid;
-    grid-template-areas:
-     "h h"
-      "n c";
-    grid-template-rows: 60px 1fr ;
-    grid-template-columns: 2fr 10fr ;
-    grid-gap: 10px;
+    grid-template-areas: "h h" "n c";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 2px;
 }
 
-.appPageContainer{
-  display: flex;
+.appPageContainer {
+    display: flex;
+    min-width: 675px;
 }
 
-.appPageNavbar{
+.appPageNavbar {
     background-color: #edeef0;
     height: auto;
 
@@ -27,7 +26,7 @@
 
     background-color: #edeef0;
     width: 100%;
-    margin-left: 9px;
+    margin-left: 2px;
     height: auto;
 
 }
@@ -40,7 +39,7 @@
     right: 10px;
 }
 
-.preloaderArea{
+.preloaderArea {
     display: flex;
     position: absolute;
     justify-content: center;

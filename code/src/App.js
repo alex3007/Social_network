@@ -5,7 +5,6 @@ import {HashRouter, Redirect, Switch, Route, withRouter} from "react-router-dom"
 import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import LoginPage from "./components/Login/Login";
-import intro from './assets/images/intro.png';
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
@@ -79,7 +78,6 @@ class App extends Component {
                                    render={() => <div>404 NOT FOUND</div>}/>
 
                         </Switch>
-                        <img className="appPageIntro" src={intro} alt='intro'/>
                     </div>
                 </div>
                 <footer className="footer"/>
