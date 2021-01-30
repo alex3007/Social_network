@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import cls from "./User.module.css";
@@ -10,12 +11,11 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
             <div className={cls.userInfo}>
                 <div className={cls.userData}>
                     <NavLink to={'/profile/' + user.id}>
-                        <img src={user.photos.small != null ? user.photos.small : userPhoto}
+                        <img src={userPhoto}
                              className={cls.userPhoto}/>
                     </NavLink>
                     <span>
-                        <div><p><b>Name:</b><br/> {user.name}</p></div>
-                        <div><p>{user.status}</p></div>
+                        <div><p><b>Name:</b><br/> {user.profile.fullName}</p></div>
                     </span>
                 </div>
                 <div className={cls.buttonArea}>

@@ -1,75 +1,47 @@
 import * as axios from "axios";
 
 
-const instance = axios.create({
-    withCredentials: true,
-    baseURL: 'https://social-network.samuraijs.com/api/1.0/',
-    headers:     {
-        "API-KEY": "4161e624-bb68-477e-b64c-76c795eac3b1"
-    }
-});
-
+const  baseURL = `https://todoalexserver.herokuapp.com/social`;
 
 export const usersAPI = {
-    getUsers(currentPage = 1, pageSize = 10) {
-        return instance.get(`users?page=${currentPage}&count=${pageSize}`)
-            .then(response => {
-                return response.data;
-            });
+
+    getUsers() {
+        return axios.get(baseURL)
     },
     follow(userId) {
-        return instance.post(`follow/${userId}`)
+        return axios.put(baseURL, {id: userId})
     },
     unfollow(userId) {
-        return instance.delete(`follow/${userId}`)
-    },
-    getProfile(userId) {
-        console.warn('Obsolete method. Please profileAPI object.')
-        return profileAPI.getProfile(userId);
+        return axios.delete(baseURL, {id: userId})
     }
 };
 
 export const profileAPI = {
-    getProfile(userId) {
-        return instance.get(`profile/` + userId);
+    getProfile() {
+        return axios.get(baseURL + `/profile`)
     },
-    getStatus(userId) {
-        return instance.get(`profile/status/` + userId);
+    getStatus() {
+        return axios.get(baseURL + `/status`);
     },
     updateStatus(status) {
-        return instance.put(`profile/status`, { status: status });
-    },
-    savePhoto(photoFile) {
-        const formData = new FormData();
-        formData.append("image", photoFile);
-
-        return instance.put(`profile/photo`, formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        });
+        return axios.put(baseURL + `/status`, { status: status });
     },
     saveProfile(profile) {
-        return instance.put(`profile`, profile );
+        return axios.put(baseURL + `/profile`, {profile: profile});
     }
 };
 
 export const authAPI = {
     me() {
-        return instance.get(`auth/me`);
+        return axios.get(baseURL +`/auth`);
     },
-    login(email, password, rememberMe = false, captcha = null) {
-        return instance.post(`auth/login`, { email, password, rememberMe, captcha });
+    login(email, password) {
+        return axios.post(baseURL +`/auth`, { email: email, password: password});
     },
     logout() {
-        return instance.delete(`auth/login`);
+        return axios.delete(baseURL +`/auth`);
     }
 };
 
-export const securityAPI = {
-    getCaptchaUrl() {
-        return instance.get(`security/get-captcha-url`);
-    }
-};
 
 

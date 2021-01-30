@@ -1,37 +1,64 @@
 .container {
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     flex-wrap: wrap;
-    padding-top: 10px;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
+    max-width: 800px;
 }
 
 .container img {
-    width: 50px;
+    width:100px;
     margin: 5px;
-    border-radius: 5px;
-    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
-.container h3 {
+.container p {
     margin-bottom: 15px;
     color: #2a588b;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .item{
-    background-color: #ffffff;
-    border: #edeef0 1px solid;
-    box-shadow: #808890 0 0 10px;
-    border-radius: 10px;
-    margin: 10px;
-    cursor: pointer;
-    width: 100px;
-    height: 100px;
+    background-color:#dae1e8;
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+}
 
+.userCard{
+    margin: 10px;
+    border-radius: 60px 20px 60px 20px;
+    padding: 40px 10px 20px 10px;
+    width: 170px;
+}
+
+.userInfo{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.userImage{
+    text-align: center;
+    padding: 30px 10px;
+    background-color: rgba(120, 150, 173, 0.1);
+    width: 150px;
+    border-radius: 60px 20px 0 0;
+}
+
+.userName{
+    background-color: #ffffff;
+    box-shadow: #808890 0 0  10px;
+    padding: 10px;
+    border-radius: 0 0 40px 10px;
+    width: 150px;
+    text-align: center;
 }

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 2,
+    "profile": {
+      "fullName": "Alex",
+      "lookingForAJob": "yes",
+      "aboutMe": "Profy",
+      "scills": "Js"
+    },
+    "followed": true
+  },
+  {
+    "id": 3,
+    "profile": {
+      "fullName": "Sveta",
+      "lookingForAJob": "no",
+      "aboutMe": "Nice",
+      "scills": "Ruby"
+    },
+    "followed": false
+  },
+  {
+    "id": 4,
+    "profile": {
+      "fullName": "Olga",
+      "lookingForAJob": "yes",
+      "aboutMe": "The best",
+      "scills": "Java"
+    },
+    "followed": false
+  },
+  {
+    "id": 5,
+    "profile": {
+      "fullName": "Den",
+      "lookingForAJob": "no",
+      "aboutMe": "Junior",
+      "scills": "C#"
+    },
+    "followed": false
+  },
+  {
+    "id": 6,
+    "profile": {
+      "fullName": "Oleg",
+      "lookingForAJob": "yes",
+      "aboutMe": "Cool",
+      "scills": "Php"
+    },
+    "followed": false
+  },
+  {
+    "id": 7,
+    "profile": {
+      "fullName": "Alex",
+      "lookingForAJob": "no",
+      "aboutMe": "Super",
+      "scills": "Js"
+    },
+    "followed": false
+  },
+  {
+    "id": 8,
+    "profile": {
+      "fullName": "Lena",
+      "lookingForAJob": "yes",
+      "aboutMe": "Hr",
+      "scills": "English"
+    },
+    "followed": false
+  }
+]

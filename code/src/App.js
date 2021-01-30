@@ -8,10 +8,8 @@ import LoginPage from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
-import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux-store";
 import {withSuspense} from "./components/hoc/withSuspense";
-import NewsPage from "./components/pages/NewsPage/NewsPage";
 import MusicPage from "./components/pages/MusicPage/MusicPage";
 import VideoPage from "./components/pages/VideoPage/VideoPage";
 import FriendsPage from "./components/pages/FriendsPage/FriendsPage";
@@ -32,12 +30,6 @@ class App extends Component {
     }
 
     render() {
-        if (!this.props.initialized) {
-            return <div className='preloaderArea'>
-                    <Preloader/>
-            </div>
-        }
-
         return (
             <div className='appPage'>
                 <HeaderContainer/>
@@ -61,9 +53,6 @@ class App extends Component {
 
                             <Route path='/login'
                                    render={() => <LoginPage/>}/>
-
-                            <Route path='/news'
-                                   render={() => <NewsPage/>}/>
 
                             <Route path='/music'
                                    render={() => <MusicPage/>}/>

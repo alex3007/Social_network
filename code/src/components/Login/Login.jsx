@@ -11,9 +11,9 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
         <form onSubmit={handleSubmit}>
             {createField("Email", "email", [required], Input)}
-            <p> Enter: <b>free@samuraijs.com</b></p>
+            <p> Enter: <b>user@gmail.com</b></p>
             {createField("Password", "password", [required], Input, {type: "password"})}
-            <p> Enter: <b>free</b></p>
+            <p> Enter: <b>123</b></p>
             <div className={cls.checkBox}>
                 {createField(null, "rememberMe", [], Input, {type: "checkbox"})}
                 <p>- remember me</p>

@@ -18,9 +18,6 @@ const Navbar = () => {
             <NavLink to="/friends" className={cls.navbarLink} activeClassName={cls.active}>
                 <i className="fa fa-user-circle "/>Friends</NavLink>
 
-            <NavLink to="/news" className={cls.navbarLink} activeClassName={cls.active}>
-                <i className="fa fa-newspaper-o"/>News</NavLink>
-
             <NavLink to="/music" className={cls.navbarLink} activeClassName={cls.active}>
                 <i className="fa fa-headphones"/>Music</NavLink>
 

@@ -5,19 +5,13 @@ import userPhoto from '../../../assets/images/myphoto.jpg';
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import ProfileDataForm from "./ProfileDataForm";
 
-const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveProfile}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile}) => {
 
     let [editMode, setEditMode] = useState(false);
 
     if (!profile) {
         return <Preloader/>
     }
-
-    const onMainPhotoSelected = (e) => {
-        if (e.target.files.length) {
-            savePhoto(e.target.files[0]);
-        }
-    };
 
     const onSubmit = (formData) => {
         saveProfile(formData).then(
@@ -31,11 +25,9 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
         <div className={cls.profileContainer}>
             <div className={cls.profile}>
                 <div className={cls.profileImage}>
-                    <img src={profile.photos.large || userPhoto} className={cls.mainPhoto} alt='avatar'/>
-                    {isOwner && <div><input  className={cls.changeImage} type={"file"} onChange={onMainPhotoSelected}/>
-                    <label className={cls.changeImageLabel}>Change image</label>
-                    </div>}
+                    <img src={userPhoto} className={cls.mainPhoto} alt='avatar'/>
                 </div>
+
                 <div className={cls.profileDescription}>
                     {editMode
                         ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
@@ -47,7 +39,6 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
                     <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
                 </div>
             </div>
-
         </div>
     )
 };
@@ -64,7 +55,7 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
         </div>
         {profile.lookingForAJob &&
         <div className={cls.profileData}>
-            <b>My professional skills:</b> {profile.lookingForAJobDescription}
+            <b>My professional skills:</b> {profile.scills}
             <hr/>
         </div>
         }
