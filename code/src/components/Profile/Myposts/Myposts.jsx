@@ -23,7 +23,10 @@ let AddNewPostFormRedux = reduxForm({form: "ProfileAddNewPostForm"})(AddNewPostF
 
 const MyPosts = (props) => {
     let postsElements =
-        props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>);
+        !props.isOwner ?
+            (props.profilePosts && props.profilePosts.posts.map(p => <Post message={p.message}
+                                                                           likesCount={p.likesCount}/>)) :
+            props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>);
 
     let newPostElement = React.createRef();
 
@@ -37,8 +40,10 @@ const MyPosts = (props) => {
             <div className={cls.posts}>
                 {postsElements}
             </div>
+
             <div className={cls.textArea}>
-                <AddNewPostFormRedux onSubmit={onAddPost}/>
+                {props.isOwner &&
+                <AddNewPostFormRedux onSubmit={onAddPost}/>}
             </div>
         </div>
     )

@@ -12,15 +12,18 @@ var user = {
     email: 'user@gmail.com',
     login: 'User',
     password: '123',
-    friends: [],
     profile: {
         fullName: 'User',
         lookingForAJob: 'yes',
         aboutMe: 'GoodMan',
-        scills: 'React'
+        scills: 'React',
+        posts: [
+            {id: 1, message: 'Frontend is my pleasure', likesCount: 11},
+            {id: 2, message: 'You are successful if you like your job', likesCount: 15}
+        ]
     },
     status: 'Hello',
-    posts: [{id: 1, message: 'Hello', likes: 5}]
+
 };
 
 // getUsers
@@ -42,7 +45,7 @@ router.put('/', (req, res) => {
         return i
     })
 
-    res.json({resultCode:0});
+    res.json({resultCode: 0});
 })
 
 
@@ -57,9 +60,8 @@ router.delete('/', (req, res) => {
         return i
     })
 
-    res.json({resultCode:0});
+    res.json({resultCode: 0});
 })
-
 
 
 // getAuth
@@ -86,8 +88,21 @@ router.get('/profile', (req, res) => {
     );
 })
 
-// saveProfile
+// getUserProfile
 router.put('/profile', (req, res) => {
+    if (!req.body) {
+        return res.sendStatus(400)
+    }
+
+    let owner = usersList.find(f => f.id === req.body.userId);
+
+    res.json(
+        owner.profile
+    );
+})
+
+// saveProfile
+router.post('/profile', (req, res) => {
     if (!req.body) {
         return res.sendStatus(400)
     }

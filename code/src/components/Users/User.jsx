@@ -1,8 +1,8 @@
-
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import cls from "./User.module.css";
-import userPhoto from "../../assets/images/friend.jpg";
+import userMale from "../../assets/images/male.png";
+import userFemale from "../../assets/images/female.png";
 
 
 let User = ({user, followingInProgress, unfollow, follow}) => {
@@ -11,11 +11,13 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
             <div className={cls.userInfo}>
                 <div className={cls.userData}>
                     <NavLink to={'/profile/' + user.id}>
-                        <img src={userPhoto}
-                             className={cls.userPhoto}/>
+                        {user.profile.male?
+                            <img src={userMale} className={cls.userPhoto}/>:
+                            <img src={userFemale} className={cls.userPhoto}/>
+                        }
                     </NavLink>
                     <span>
-                        <div><p><b>Name:</b><br/> {user.profile.fullName}</p></div>
+                        <div><br/><p><b>{user.profile.fullName}</b></p></div>
                     </span>
                 </div>
                 <div className={cls.buttonArea}>

@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import cls from './ProfileInfo.module.css';
 import Preloader from "../../common/Preloader/Preloader";
-import userPhoto from '../../../assets/images/myphoto.jpg';
+import userPhoto from '../../../assets/images/myphoto.png';
+import userMale from '../../../assets/images/male.png';
+import userFemale from '../../../assets/images/female.png';
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import ProfileDataForm from "./ProfileDataForm";
 
@@ -21,11 +23,21 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile}) => {
         );
     };
 
+    const UserImage = () => {
+        if (isOwner) {
+            return <img src={userPhoto} className={cls.mainPhoto} alt='avatar'/>
+        } else if (profile.male) {
+            return <img src={userMale} className={cls.mainPhoto} alt='avatar'/>
+        } else {
+            return <img src={userFemale} className={cls.mainPhoto} alt='avatar'/>
+        }
+    }
+
     return (
         <div className={cls.profileContainer}>
             <div className={cls.profile}>
                 <div className={cls.profileImage}>
-                    <img src={userPhoto} className={cls.mainPhoto} alt='avatar'/>
+                    <UserImage/>
                 </div>
 
                 <div className={cls.profileDescription}>
@@ -36,7 +48,8 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile}) => {
                         }} profile={profile} isOwner={isOwner}/>}
                 </div>
                 <div className={cls.profileStatus}>
-                    <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
+                    <ProfileStatusWithHooks status={isOwner ? profile.status : status}
+                                            updateStatus={updateStatus}/>
                 </div>
             </div>
         </div>

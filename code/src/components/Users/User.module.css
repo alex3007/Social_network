@@ -4,6 +4,10 @@
     border-radius: 50%;
 }
 
+.userPhoto:hover {
+   opacity: 0.7;
+}
+
 .selectedPage {
     font-weight: bold;
 }

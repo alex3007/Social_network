@@ -2,6 +2,7 @@ import * as axios from "axios";
 
 
 const  baseURL = `https://todoalexserver.herokuapp.com/social`;
+//const  baseURL = `http://localhost:80/social`;
 
 export const usersAPI = {
 
@@ -20,6 +21,9 @@ export const profileAPI = {
     getProfile() {
         return axios.get(baseURL + `/profile`)
     },
+    getUserProfile(userId) {
+        return axios.put(baseURL + `/profile`, { userId: userId })
+    },
     getStatus() {
         return axios.get(baseURL + `/status`);
     },
@@ -27,7 +31,7 @@ export const profileAPI = {
         return axios.put(baseURL + `/status`, { status: status });
     },
     saveProfile(profile) {
-        return axios.put(baseURL + `/profile`, {profile: profile});
+        return axios.post(baseURL + `/profile`, {profile: profile});
     }
 };
 
