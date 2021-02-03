@@ -24,6 +24,16 @@
     margin: 0 auto;
 }
 
+.textAreaBlue {
+    border: #808890 solid 1px;
+    width: 505px;
+    border-radius: 5px 5px 20px 5px;
+    background-color: #7896ad;
+    box-shadow: #808890 0 0 5px;
+    padding: 10px 5px 20px 20px;
+    margin: 0 auto;
+}
+
 .posts {
     display: flex;
     flex-flow: column;

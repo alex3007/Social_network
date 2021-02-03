@@ -14,6 +14,7 @@
 .appPageContainer {
     display: flex;
     min-width: 675px;
+    position: relative;
 }
 
 .appPageNavbar {
@@ -46,6 +47,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    background-color: #edeef0;
 }
 
 .preloaderArea img {

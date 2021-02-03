@@ -9,13 +9,9 @@ const maxLength10 = maxLengthCreator(55);
 
 let AddNewPostForm = (props) => {
     return <form onSubmit={props.handleSubmit}>
-        <div>
-            <Field name="newPostText" component={Textarea} placeholder={"Post message"}
-                   validate={[required, maxLength10]}/>
-        </div>
-        <div>
-            <button className='button'>Add post</button>
-        </div>
+        <Field name="newPostText" component={Textarea} placeholder={"Post message"}
+               validate={[required, maxLength10]}/>
+        <button className='button'>Add post</button>
     </form>;
 };
 
@@ -40,11 +36,10 @@ const MyPosts = (props) => {
             <div className={cls.posts}>
                 {postsElements}
             </div>
-
-            <div className={cls.textArea}>
-                {props.isOwner &&
-                <AddNewPostFormRedux onSubmit={onAddPost}/>}
-            </div>
+                <div className={!props.isOwner ?cls.textAreaBlue:cls.textArea}>
+                    {props.isOwner &&
+                    <AddNewPostFormRedux onSubmit={onAddPost}/>}
+                </div>
         </div>
     )
 };

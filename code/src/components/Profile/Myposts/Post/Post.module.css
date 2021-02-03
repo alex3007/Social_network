@@ -16,6 +16,7 @@
     border-radius: 10px;
     cursor: pointer;
     margin-right: 10px;
+    background-color: #ffffff;
 }
 .postItems p:hover i{
     opacity: 1;

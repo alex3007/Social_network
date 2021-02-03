@@ -12,6 +12,7 @@ import store from "./redux/redux-store";
 import {withSuspense} from "./components/hoc/withSuspense";
 import MusicPage from "./components/pages/MusicPage/MusicPage";
 import VideoPage from "./components/pages/VideoPage/VideoPage";
+import Preloader from "./components/common/Preloader/Preloader";
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
@@ -36,6 +37,10 @@ class App extends Component {
                     <div className='appPageNavbar'>
                         <Navbar/>
                     </div>
+                    {!this.props.initialized ?
+                    <div className='preloaderArea'>
+                        <Preloader/>
+                    </div>:
                     <div className='appPageContent'>
                         <Switch>
                             <Route exact path='/'
@@ -61,14 +66,14 @@ class App extends Component {
 
                             <Route path='/friends'
                                    render={() => <UsersContainer
-                                   friends = 'visible'
+                                       friends='visible'
                                    />}/>
 
                             <Route path='*'
                                    render={() => <div>404 NOT FOUND</div>}/>
 
                         </Switch>
-                    </div>
+                    </div>}
                 </div>
                 <footer className="footer"/>
             </div>

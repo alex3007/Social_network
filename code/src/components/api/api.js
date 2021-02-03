@@ -13,7 +13,7 @@ export const usersAPI = {
         return axios.put(baseURL, {id: userId})
     },
     unfollow(userId) {
-        return axios.delete(baseURL, {id: userId})
+        return axios.post(baseURL, {id: userId})
     }
 };
 

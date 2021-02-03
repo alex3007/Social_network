@@ -9,17 +9,17 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
     return (
         <div className={cls.userCard}>
             <div className={cls.userInfo}>
-                <div className={cls.userData}>
-                    <NavLink to={'/profile/' + user.id}>
-                        {user.profile.male?
-                            <img src={userMale} className={cls.userPhoto}/>:
-                            <img src={userFemale} className={cls.userPhoto}/>
-                        }
-                    </NavLink>
+                <NavLink to={'/profile/' + user.id}
+                         className={cls.userData}>
+                    {user.profile.male ?
+                        <img src={userMale} className={cls.userPhoto}/> :
+                        <img src={userFemale} className={cls.userPhoto}/>
+                    }
                     <span>
-                        <div><br/><p><b>{user.profile.fullName}</b></p></div>
-                    </span>
-                </div>
+                        <br/>
+                        <p><b>{user.profile.fullName}</b></p>
+                        </span>
+                </NavLink>
                 <div className={cls.buttonArea}>
                     {user.followed
                         ? <button className={cls.userBtn} disabled={followingInProgress

@@ -14,6 +14,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile}) => {
     if (!profile) {
         return <Preloader/>
     }
+   let userStatus = <ProfileStatusWithHooks status={isOwner ? profile.status : status} updateStatus={updateStatus}/>
 
     const onSubmit = (formData) => {
         saveProfile(formData).then(
@@ -48,8 +49,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, saveProfile}) => {
                         }} profile={profile} isOwner={isOwner}/>}
                 </div>
                 <div className={cls.profileStatus}>
-                    <ProfileStatusWithHooks status={isOwner ? profile.status : status}
-                                            updateStatus={updateStatus}/>
+                   <br/>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@ const Dialogs = (props) => {
 
     return (
         <div className={cls.dialogsArea}>
-            <h2>Messages</h2>
+            <h2>Dialog with Sveta</h2>
                 <div className={cls.dialogs}>
                     <div className={cls.names}>
                         {dialogsElements}
